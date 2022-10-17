@@ -10,17 +10,17 @@ import com.momo.imc.ws.MessageBody;
 
 public class SupperTest implements IMObserver {
 
-    String imIPAndPort_01 = "3.1.84.229:9944";
+    String imIPAndPort_01 = "xxx.xxx.xxx.xxx:xxx";
     String fromUid_01 = "30099";
     String token_01 = "123";
     String deviceId_01 = "1649303524433-44426425";
 
-    String imIPAndPort_02 = "52.221.226.203:9922";
+    String imIPAndPort_02 = "xxx.xxx.xxx.xxx:xxx";
     String fromUid_02 = "30088";
     String token_02 = "123";
     String deviceId_02 = "1649303524433-44426426";
 
-    String imIPAndPort_03 = "52.221.226.203:9933";
+    String imIPAndPort_03 = "xxx.xxx.xxx.xxx:xxx";
     String fromUid_03 = "30077";
     String token_03 = "123";
     String deviceId_03 = "1649303524433-44426427";
