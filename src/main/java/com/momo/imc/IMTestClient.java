@@ -10,13 +10,11 @@ import java.util.Random;
 
 public class IMTestClient implements IMObserver {
 
-//    String imIPAndPort = "13.215.183.216:9922";
-//    String imIPAndPort = "54.254.19.4:9933";//预发布IM
-    String imIPAndPort = "13.250.111.190:9922"; //测试IM
-    String fromUid = "1001_30088";
-    String token = "123";
+    String imIPAndPort = "xxx.xxx.xxx.xxx:xxxx"; //测试IM
+    String fromUid = "xxxx";
+    String token = "xxxx";
     String deviceId = IMTimeUtils.getNanoTime()+"";
-    public String fbFlag = "1001";
+    public String fbFlag = "xxxx";
 
 
     public IMTestClient() {
