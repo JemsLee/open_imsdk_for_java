@@ -44,6 +44,7 @@ public class IMWebSocketClient extends WebSocketClient {
 
     @Override
     public void onOpen(ServerHandshake arg0) {
+        key = IMEncryptUtil.getUidKey(fromUid);
         send(createLoginStr());
     }
 
@@ -72,13 +73,11 @@ public class IMWebSocketClient extends WebSocketClient {
     @Override
     public void onMessage(String arg0) {
 
-        if (arg0.indexOf("登录成功") >= 0) {
-            isLogin = true;
-            imManagerSubject.publish(arg0);
-            key = IMEncryptUtil.getUidKey(fromUid);
-        }
         if (arg0.indexOf("{") >= 0) {
-            imManagerSubject.publishError(arg0);
+            if (arg0.indexOf("登录成功") >= 0) {
+                isLogin = true;
+            }
+            imManagerSubject.publish(arg0);
         } else {
             String recStr = IMEncryptUtil.decrypt(key, arg0);
             imManagerSubject.publish(recStr);
